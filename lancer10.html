@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+		function toss(){
+			var e = Math.random();
+			if (e>0.5)
+				return "Pile";
+			else
+				return "Face";
+		}
+		function statEventToss(nbEssais){
+			var tableauNbPile = [];
+			for(var i = 0; i < nbEssais; i = i + 1){
+				var inc = 0;
+				for(var j = 0; j < 10; j = j + 1){
+					var e = toss();
+					if (e ="Pile")
+						inc++;
+				}
+				window.console.log(inc);
+				tableauNbPile.push[inc];
+			}
+			return tableauNbPile
+		}
+	var resultat = statEventToss(3);			
+		document.write("<p>tableau pile : "+resultat+"</p>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
