@@ -10,8 +10,9 @@
 			else
 				return "Face";
 		}
-		function statEventToss(nbEssais){
+		function statEventToss(nbPile, nbEssais){
 			var tableauNbPile = [];
+			var statPile = 0;
 			for(var i = 0; i < nbEssais; i = i + 1){
 				var inc = 0;
 				for(var j = 0; j < 10; j = j + 1){
@@ -19,11 +20,12 @@
 					if (e == "Pile")
 						inc++;
 				}
-				tableauNbPile.push(inc);
+				if (inc == nbPile)
+					statPile++;
 			}
-			return tableauNbPile
+			return statPile/nbEssais;
 		}
-	var resultat = statEventToss(5);			
+		var resultat = statEventToss(2,100055);			
 		document.write("<p>tableau pile : "+resultat+"</p>");
 		</script>
 	</head>
